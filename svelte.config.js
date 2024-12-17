@@ -6,6 +6,9 @@ const preprocess = sveltePreprocess({
   typescript: {
     tsconfigFile: './tsconfig.json'
   },
+  scss: {
+    includePaths: ['src'],
+  },
   postcss: {
     plugins: [
       require('autoprefixer'),

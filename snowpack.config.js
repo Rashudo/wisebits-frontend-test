@@ -8,7 +8,8 @@ module.exports = {
     ['@snowpack/plugin-svelte'],
     ['@snowpack/plugin-typescript'],
     ['@snowpack/plugin-webpack'],
-    ['@snowpack/plugin-dotenv']
+    ['@snowpack/plugin-dotenv'],
+    ['snowpack-plugin-less'],
   ],
   packageOptions: {
     "packageLookupFields": ["svelte", "module", "main"]
@@ -21,10 +22,10 @@ module.exports = {
   },
   alias: {
     '@': '/src',
-    '@components': './src/components',
-    '@containers': './src/components/containers',
+    '@containers': './src/containers',
     '@lib': './src/lib',
     '@stores': './src/stores',
+    '@styles': './src/assets/styles',
   },
   routes: [
     { match: 'routes', src: '.*', dest: '/index.html' },

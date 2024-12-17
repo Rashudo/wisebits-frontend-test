@@ -1,13 +1,9 @@
 <script lang="ts">
-    import CoffeePage from "@containers/coffee-list/coffee-list.svelte";
+    import "the-new-css-reset/css/reset.css";
+    import CoffeePage from "@containers/coffee-list/coffee-page.svelte";
+    import "@styles/base.less";
 </script>
 
 <main>
     <CoffeePage/>
 </main>
-
-<style>
-    :root {
-        --svelte-rgb: 255, 62, 0;
-    }
-</style>

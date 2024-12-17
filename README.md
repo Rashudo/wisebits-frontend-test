@@ -1,45 +1,71 @@
 [![MadeWithSvelte.com shield](https://madewithsvelte.com/storage/repo-shields/2959-shield.svg)](https://madewithsvelte.com/p/stts/shield-link)
 
 
-Svelte / Typescript / Tailwind / Snowpack Template
+Тестовое задание для компании Wisebits
 ==================================================
 
-A template for using Svelte, Typescript, Tailwind and Snowpack together.
 
-Out-of-the-box 100s across the board on lighthouse.
-
-Installation
+Перед запуском
 ------------
 
 ```
-npx degit "srmullen/stts#main" my_app
-cd my_app
 npm install
 ```
 
-Scripts
+Скрипты
 -------
 
-### Start a development server
+### Запуск сервера разработки
 
 `npm run dev`
 
-### Run svelte-check
+### Запуск svelte-check
 
 `npm run check`
-or
+или
 `npm run check:watch`
 
-### Run test
+### Запуск тестов
 
 `npm run test`
-or
+или
 `npm run test:watch`
 
-### Build the application
+### Сборка
 
 `npm run build`
 
-### Serve the application
 
-`npm run serve`
+## Описание реализации
+Проект разделён на контейнеры, чтобы не смешивать логику.
+Все контейнеры находятся в папке `src/containers`. 
+Внутри контейнера располагаются компоненты, стили, сервисы, сущности, сторы и контракты, которые используются только в этом контейнере.
+
+"Общение" между контейнерами происходит через actions, например, toast показывается через `showToast` action.
+
+Внутренняя логика работы контейнера находится в `service`, который работает с сущностями и сторами.
+
+Помимо контейнеров в проекте представлены общие инструменты, которые могут использоваться в разных частях проекта.
+Они располагаются в папке `src/lib`. Например, там находится клиент для работы с API, помощник сброса таймера и тд.
+
+Тесты находятся в папке `test`.
+
+Переменные окружения находятся в файле `.env`.
+
+## Описание контейнеров
+**assets** - Статические файлы
+
+**actions** - Юзкейсы
+
+**components** - Компоненты
+
+**contracts** - Контракты
+
+**entities** - Сущности
+
+**exceptions** - Исключения
+
+**services** - Сервисы
+
+**stores** - Сторы
+

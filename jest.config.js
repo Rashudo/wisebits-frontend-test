@@ -7,7 +7,11 @@ module.exports = {
       }
     ],
     "^.+\\.ts$": "ts-jest",
-    '^.+\\.js$': 'babel-jest'
+    '^.+\\.js$': 'babel-jest',
   },
-  moduleFileExtensions: ['js', 'ts', 'svelte']
+  moduleFileExtensions: ['js', 'ts', 'svelte'],
+  moduleNameMapper: {
+    '^@lib/(.*)$': '<rootDir>/src/lib/$1',
+    '\\.less$': 'identity-obj-proxy'
+  },
 }

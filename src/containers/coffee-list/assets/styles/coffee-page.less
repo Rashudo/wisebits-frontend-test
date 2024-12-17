@@ -1,0 +1,32 @@
+@import "../../../../assets/styles/mixins.less";
+
+.coffee-page {
+  .flex-container(column, var(--padding-medium), center);
+  .padding(var(--padding-medium), var(--padding-medium));
+
+  &__list {
+    .flex-container(column, var(--padding-medium));
+    .w-full();
+    max-width: 37rem;
+  }
+
+  &__load-more {
+    .button-style(
+            var(--padding-small) var(--padding-medium),
+            var(--font-size-medium),
+            var(--primary-color),
+            var(--white-color),
+            var(--border-radius-small)
+    );
+    .margin(var(--padding-medium));
+
+    &:hover:not(:disabled) {
+      background-color: var(--primary-color);
+    }
+
+    &:disabled {
+      background-color: var(--neutral-color);
+      cursor: not-allowed;
+    }
+  }
+}

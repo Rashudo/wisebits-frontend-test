@@ -1,0 +1,50 @@
+@break-sm: ~"screen and (min-width: 375px)";
+
+.flex-container(@direction: row, @gap: 0, @align: normal, @justify: normal) {
+  display: flex;
+  flex-direction: @direction;
+  gap: @gap;
+  align-items: @align;
+  justify-content: @justify;
+}
+
+.w-full() {
+  width: 100%;
+}
+
+.h-full() {
+  height: 100%;
+}
+
+.padding(@top: 0, @right: @top, @bottom: @top, @left: @right) {
+  padding: @top @right @bottom @left;
+}
+
+.margin(@top: 0, @right: @top, @bottom: @top, @left: @right) {
+  margin: @top @right @bottom @left;
+}
+
+.button-style(@padding, @font-size, @bg-color, @text-color, @border-radius) {
+  padding: @padding;
+  font-size: @font-size;
+  background-color: @bg-color;
+  color: @text-color;
+  border: none;
+  border-radius: @border-radius;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+.animation-fade-in-out() {
+  @keyframes fade-in-out {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

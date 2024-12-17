@@ -27,10 +27,10 @@
     /* paths - If you configure Snowpack import aliases, add them here. */
     "paths": {
       "@": ["src/*"],
-      "@containers/*": ["src/components/containers/*"],
+      "@containers/*": ["src/containers/*"],
       "@lib/*": ["src/lib/*"],
-      "@components/*": ["src/components/*"],
-      "@stores/*": ["src/stores/*"]
+      "@stores/*": ["src/stores/*"],
+      "@styles/*": ["src/assets/styles/*"],
     },
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,

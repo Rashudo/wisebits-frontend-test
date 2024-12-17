@@ -1,0 +1,88 @@
+@import "../../../../assets/styles/mixins.less";
+
+.coffee-card {
+  .flex-container(column, var(--padding-medium));
+  .padding(var(--padding-medium));
+  border: 1px solid var(--neutral-color);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  @media @break-sm {
+    .flex-container(row, var(--padding-medium));
+  }
+
+  &__image {
+    .w-full();
+
+    @media @break-sm {
+      width: 7.5rem;
+      height: 7.5rem;
+      flex-shrink: 0;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-placeholder {
+      .flex-container(row, 0, center, center);
+      .w-full();
+      .h-full();
+      min-height: 7.5rem;
+      color: var(--white-color);
+      font-weight: var(--font-weight-bold);
+      background: url('/assets/images/p.jpg') center center no-repeat var(--neutral-color);
+      background-size: cover;
+
+      @media @break-sm {
+        background-size: 350%;
+      }
+    }
+  }
+
+  &__info {
+    .flex-container(column);
+    flex-shrink: 1;
+    overflow: auto;
+
+    &-title {
+      font-size: var(--font-size-large);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--padding-small);
+    }
+
+    &-origin,
+    &-variety {
+      font-size: var(--font-size-medium);
+      color: var(--text-color);
+      margin-bottom: calc(var(--padding-small) / 2);
+    }
+
+    &-space {
+      .padding(var(--padding-small), 0);
+
+      @media @break-sm {
+        flex-grow: 1;
+        .padding(0, 0);
+      }
+    }
+
+    &-tags {
+      .flex-container(row, var(--padding-small));
+      overflow-x: auto;
+      scrollbar-color: transparent transparent;
+      scrollbar-width: thin;
+
+      &-tag {
+        background-color: var(--background-light);
+        padding: calc(var(--padding-small) / 2) var(--padding-small);
+        border-radius: var(--border-radius-small);
+        font-size: var(--font-size-small);
+        white-space: nowrap;
+      }
+    }
+  }
+}

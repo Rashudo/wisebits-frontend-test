@@ -5,4 +5,4 @@ export const imageLoader = (url: string): Promise<boolean> => {
         img.onload = () => resolve(true);
         img.onerror = () => resolve(false);
     });
-}
+};

@@ -1,0 +1,36 @@
+@import "../../../../assets/styles/mixins.less";
+
+.toast-modal {
+  .flex-container(column, var(--padding-small));
+  position: fixed;
+  top: var(--padding-small);
+  .margin(0, var(--padding-small));
+  text-align: center;
+
+  @media @break-sm {
+    top: var(--padding-medium);
+    right: var(--padding-medium);
+  }
+
+  &__message {
+    .padding(var(--padding-small), var(--padding-medium));
+    border-radius: var(--border-radius-small);
+    color: var(--white-color);
+    font-weight: var(--font-weight-bold);
+    animation: fade-in-out 0.3s ease-out;
+
+    &.info {
+      background: var(--info-color);
+    }
+
+    &.success {
+      background: var(--success-color);
+    }
+
+    &.error {
+      background: var(--error-color);
+    }
+  }
+
+  .animation-fade-in-out();
+}
