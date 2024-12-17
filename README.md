@@ -56,23 +56,23 @@ npm install
 **assets** - Статические файлы
 
 **actions** - Юзкейсы
-[Пример actions] https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/toast/actions
+[Пример actions] (https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/toast/actions)
 
 **components** - Компоненты
-[Пример components] https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/components
+[Пример components] (https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/components)
 
 **contracts** - Контракты
-[Пример contracts] https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/contracts
+[Пример contracts] (https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/contracts)
 
 **entities** - Сущности
-https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/entities
+[Пример entities] (https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/entities)
 
 **exceptions** - Исключения
-[Пример exceptions] https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/exceptions
+[Пример exceptions] (https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/exceptions)
 
 **services** - Сервисы
-[Пример exceptions] https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/services
+[Пример exceptions] (https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/services)
 
 **stores** - Сторы
-[Пример stores] https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/stores
+[Пример stores] (https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/stores)
 
