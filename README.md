@@ -76,3 +76,8 @@ npm install
 **stores** - Сторы
 [Пример stores](https://github.com/Rashudo/wisebits-frontend-test/tree/main/src/containers/coffee-list/stores)
 
+## Улучшения и доработки
+- Добавить тесты для всех контейнеров
+- Добавить взаимодействие с алиасами, чтобы не использовать относительные пути
+- Добавить прелоадер
+- Добавить анимации и плавный скролл
