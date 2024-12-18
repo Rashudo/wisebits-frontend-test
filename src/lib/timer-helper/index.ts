@@ -1,28 +1,21 @@
-export class TimerHelper {
+import type {TimerHelperContract} from "@lib/timer-helper/timer-helper.contract";
 
-    /**
-     * Ссылка на таймер
-     * @private
-     */
-    private static timer: ReturnType<typeof setTimeout> | null = null;
+export class TimerHelper implements TimerHelperContract {
 
+    private timer: ReturnType<typeof setTimeout> | null = null;
 
-    /**
-     * Сбрасывает таймер с новым интервалом и колбэком.
-     * @param callback - Функция, вызываемая по истечении интервала.
-     * @param interval - Интервал времени в миллисекундах.
-     */
-    static reset(callback: () => void, interval: number): void {
+    public set(callback: () => void, interval: number): void {
+        this.timer = setTimeout(callback, interval);
+    }
+
+    public reset(callback: () => void, interval: number): void {
         if (this.timer !== null) {
             clearTimeout(this.timer);
         }
         this.timer = setTimeout(callback, interval);
     }
 
-    /**
-     * Очищает активный таймер, если он существует.
-     */
-    static clear(): void {
+    public clear(): void {
         if (this.timer !== null) {
             clearTimeout(this.timer);
             this.timer = null;

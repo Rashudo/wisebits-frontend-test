@@ -1,6 +1,7 @@
 <script lang="ts">
     import {afterUpdate, onDestroy, onMount} from "svelte";
     import {TimerHelper} from "@lib/timer-helper";
+    import type {TimerHelperContract} from "@lib/timer-helper/timer-helper.contract";
     import ToastModal from "@containers/toast/toast-modal.svelte";
     import CoffeeCardNode from "./components/coffee-card-node.svelte";
     import {coffeeCardsStore} from "./stores/coffee-cards.store";
@@ -11,11 +12,12 @@
 
     const INACTIVITY_INTERVAL: number = import.meta.env.SNOWPACK_PUBLIC_INACTIVITY_INTERVAL * 1000;
 
-    let loading = false;
-    let pictureIsLoading = false;
+    let loading: boolean = false;
+    let pictureIsLoading: boolean = false;
     let listContainer: HTMLElement | null = null;
     let cards: CoffeeCardContract[] = [];
     const coffeePageService: CoffeeCardServiceContract = new CoffeePageService();
+    const timerHelper: TimerHelperContract = new TimerHelper();
 
     $: isLoadMoreDisabled = loading || pictureIsLoading;
 
@@ -29,7 +31,7 @@
         loading = true;
         pictureIsLoading = true;
 
-        TimerHelper.reset(() => loadCards(), INACTIVITY_INTERVAL);
+        timerHelper.reset(() => loadCards(), INACTIVITY_INTERVAL);
 
         try {
             await coffeePageService.loadCard();
@@ -47,7 +49,7 @@
     });
 
     onDestroy(() => {
-        TimerHelper.clear();
+        timerHelper.clear();
         coffeePageService.clearCard();
     });
 

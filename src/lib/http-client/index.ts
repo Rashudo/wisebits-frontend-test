@@ -20,7 +20,7 @@ export class HttpClient implements HttpClientContact {
      * Выполняет GET запрос
      * @param url
      */
-    get = async <T>(url: string): Promise<T> => {
+    public get = async <T>(url: string): Promise<T> => {
         const response = await fetch(url, this.config);
         return response.json();
     }
@@ -30,7 +30,7 @@ export class HttpClient implements HttpClientContact {
      * @param url
      * @param data
      */
-    post = async <T>(url: string, data: any): Promise<T> => {
+    public post = async <T>(url: string, data: any): Promise<T> => {
         const response = await fetch(url, {
             ...this.config,
             method: 'POST',
@@ -44,7 +44,7 @@ export class HttpClient implements HttpClientContact {
      * @param url
      * @param data
      */
-    put = async <T>(url: string, data: any): Promise<T> => {
+    public put = async <T>(url: string, data: any): Promise<T> => {
         const response = await fetch(url, {
             ...this.config,
             method: 'PUT',
@@ -57,7 +57,7 @@ export class HttpClient implements HttpClientContact {
      * Выполняет DELETE запрос
      * @param url
      */
-    delete = async <T>(url: string): Promise<T> => {
+    public delete = async <T>(url: string): Promise<T> => {
         const response = await fetch(url, {
             ...this.config,
             method: 'DELETE'
